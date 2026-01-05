@@ -1,0 +1,254 @@
+{
+  "greet": {
+    "oga": [
+      "yo boss😎",
+      "wagwan big boss😎",
+      "yes, your steezeness 👑",
+      "MYY BOSSS🙌",
+      "chief detected"
+    ],
+    "regular": [
+      "yo",
+      "wagwan",
+      "heyya",
+      "what's good",
+      "yh?"
+    ],
+    "meh": [
+      "what",
+      "😐",
+      "nandayo",
+      "mtcheww",
+      "what do you want"
+    ],
+    "admin": [
+      "yo admin",
+      "what you up to",
+      "what's good",
+      "yo mahn wagwan"
+    ],
+    "homo": [
+      "nice try diddy",
+      "shut your homo as up nigga",
+      "what does this homo ass nigga want now",
+      "don't speak to me i'm allergic to homo",
+      "yo homo mahn🌈🌈",
+      "why are u homo"
+    ]
+  },
+  "replies": {
+    "oga": [
+      "Sorry boss, i'm not sure",
+      "I don't think i know sir",
+      "your steezeness 👑 im not endowed with such knowledge"
+    ],
+    "regular": [
+      "idk",
+      "i dont know",
+      "say what now?"
+    ],
+    "meh": [
+      "sorry einstein, idfk",
+      "😐 i look meta ai to you hunh?",
+      "mtcheww",
+      "want an answer ? that's why we have google \nIdiot😒",
+      "Helloo its yobi not GOOGLE bitch😑"
+    ]
+  },
+  "warnings": {
+    "120363423586943230@g.us:135846141403355@lid": 1,
+    "2348143699241-1613037295@g.us:71210608115747@lid": 3,
+    "2348143699241-1613037295@g.us:142129527558218@lid": 1,
+    "2348143699241-1613037295@g.us:6266843852845@lid": 2,
+    "120363316735487683@g.us:258046500540613@lid": 1
+  },
+  "games": {
+    "chain": {
+      "starter": [
+        "Hinata",
+        "Killua",
+        "Rukia",
+        "beezulbub",
+        "freecs",
+        "whitebeard",
+        "blackbeard",
+        "brownbeard",
+        "loid",
+        "kirie",
+        "Ace",
+        "Don-krieg",
+        "Lao-G",
+        "Esdeath",
+        "bertholdt",
+        "itachi",
+        "kakashi",
+        "Enel",
+        "Gan-Fall",
+        "Brook",
+        "hancock",
+        "gon",
+        "kon",
+        "soifon",
+        "obito",
+        "raizo",
+        "yeager",
+        "kruger",
+        "chopper",
+        "trunks",
+        "reiss",
+        "bertholomew",
+        "drake-x",
+        "brolly",
+        "biscuit",
+        "doffy",
+        "Android18",
+        "Android17",
+        "Android16"
+      ],
+      "scores": {
+        "120363423586943230@g.us": [
+          {
+            "date": 1767599112673,
+            "scores": {
+              "135846141403355@lid": 6
+            }
+          }
+        ]
+      }
+    },
+    "trivia": {
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Who is the creator of one piece?",
+          "ans": [
+            "eichiro oda",
+            "oda"
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "Who is the mc of one piece",
+          "ans": [
+            "monkey d luffy",
+            "luffy"
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "who is the main villian of one piece",
+          "ans": [
+            "imu"
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "What is luffy's fruit (just the name, no class) JP",
+          "ans": [
+            "hito hito no mi"
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "What is buggy's fruit (just the name, no class) JP",
+          "ans": [
+            "bara bara no mi"
+          ]
+        },
+        {
+          "id": "q6",
+          "question": "what is zoro's first sword name",
+          "ans": [
+            "wado ichi monji"
+          ]
+        }
+      ],
+      "scores": {
+        "120363423586943230@g.us": [
+           {
+            "date": 1767598525143,
+            "scores": {
+              "135846141403355@lid": 2
+            }
+          }
+        ]
+      },
+      "usedLastSession": {
+        "120363423586943230@g.us": [
+          "q1",
+          "q6",
+          "q4"
+        ]
+      }
+    },
+    "emoji": {
+      "questions": [
+        {
+          "id": "q1",
+          "question": "⚔🥦🍻",
+          "ans": [
+            "zoro",
+            "roronoa zoro"
+          ]
+        },
+        {
+          "id": "q2",
+          "question": "🐵👒",
+          "ans": [
+            "luffy",
+            "monkey d luffy"
+          ]
+        },
+        {
+          "id": "q3",
+          "question": "🐱‍👤🦊",
+          "ans": [
+            "naruto"
+          ]
+        },
+        {
+          "id": "q4",
+          "question": "😈🦊",
+          "ans": [
+            "kurama"
+          ]
+        },
+        {
+          "id": "q5",
+          "question": "💚🦸‍♂️",
+          "ans": [
+            "deku",
+            "midoriya",
+            "izuku midoriya"
+          ]
+        },
+        {
+          "id": "q6",
+          "question": "💥🦸‍♂️",
+          "ans": [
+            "bakugo",
+            "bakugou"
+          ]
+        }
+      ],
+      "usedLastSession": {
+        "120363423586943230@g.us": [
+          "q1",
+          "q3",
+          "q2"
+        ]
+      },
+      "scores": {
+        "120363423586943230@g.us": [
+          {
+            "date": 1767598525143,
+            "scores": {
+              "135846141403355@lid": 3
+            }
+          }
+        ]
+      }
+    },
+    "active": {}
+  }
+}

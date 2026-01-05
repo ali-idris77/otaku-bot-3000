@@ -1,0 +1,10 @@
+{
+    "ignore": [
+        "node_modules",
+        ".git",
+        "data",
+        "state/storage.json",
+        "auth_info/*"
+    ],
+    "ext":"js"
+}
