@@ -10,7 +10,7 @@ const {gameHandler} = require('../games/gameHandler')
 
 async function messageHandler(sock, msg) {
     console.log("handling messages...", msg)
-    if(!msg.message || msg.fromMe) return
+    if(!msg.message || msg.key.fromMe) return
     const from = msg.key.remoteJid;
     const sender = msg.key.participant;
     const text = msg.message.conversation || msg.message.extendedTextMessage?.text || ""
