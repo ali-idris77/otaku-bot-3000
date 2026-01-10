@@ -22,12 +22,12 @@ const questions = storage.games.trivia.questions
         session.usedThisSession.push(que.id)
         console.log("sending next que")
         await sock.sendMessage(from, {
-            text:`❔${que.question} \n20s`
+            text:`❔${que.question} 20s`
         })
         session.timer = setTimeout(async ()=>{
             await sock.sendMessage(from,{
                 text:`⏱Time's up, correct answer is ${que.ans[0]}. 
-                \n next question:`
+                 next question:`
             })
             session.questionsIndex += 1
             await nextQue(sock, from, sender, text)
@@ -55,10 +55,10 @@ async function trivia(sock, from, sender, text, isContinuation = false){
     console.log("starting trivia")
         await sock.sendMessage(from,{
             text:`Okayy😁 time for anime trivia👏
-        \nReply with the correct answer to the question given
-        \nY'all have 20s for each question⏱
-        \nThe first to get the correct answer scores \n>(be careful with spellings tho)
-        \nLet's gooo`
+        Reply with the correct answer to the question given
+        Y'all have 20s for each question⏱
+        The first to get the correct answer scores >(be careful with spellings tho)
+        Let's gooo`
         })
         await nextQue(sock, from, sender, text)
         return

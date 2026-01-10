@@ -28,17 +28,17 @@ async function wordChain(sock, from, sender, text, isContinuation = false) {
         saveStr(storage)
         await sock.sendMessage(from,{
             text:`Aiiit @${sender.split('@')[0]}😁 anime word chain starting now👏
-        \nReply with an anime character name or attack🤜 with a first letter thats
+        Reply with an anime character name or attack🤜 with a first letter thats
          the same as the last letter of the previous word👈
-        \nYou have 15s for this level (+5s to prepare for 1st round)⏱
-        \nThe first word is *${firstWord}*
-        \nLet's gooo`,
+        You have 15s for this level (+5s to prepare for 1st round)⏱
+        The first word is *${firstWord}*
+        Let's gooo`,
         mentions:[sender]
         })
         storage.games.active[from].timer = setTimeout(async ()=>{
             await sock.sendMessage(from,{
                 text:`⏱Time's up, Game over better luck next time. 
-                \n score: 0 | Level: 1`
+                 score: 0 | Level: 1`
             })
             storage.games.chain.scores[from] = storage.games.chain.scores[from] || []
             storage.games.chain.scores[from].push({
@@ -64,7 +64,7 @@ if(sender !== game.currentPlayer) return
   if(game.usedWords.includes(word)){
     await sock.sendMessage(from, {
         text:`${word} has already been used can-t use it again smart ass🤣.
-        \nGame over score: ${game.score} | Level: ${game.level}`,
+        Game over score: ${game.score} | Level: ${game.level}`,
         mentions: [sender]
     })
         storage.games.chain.scores[from] = storage.games.chain.scores[from] || []
@@ -81,7 +81,7 @@ if(sender !== game.currentPlayer) return
   if(game.lastWord && word[0] !== game.lastWord.slice(-1)){
     await sock.sendMessage(from, {
         text:`Your answer ${word}'s first letter doesn't match the first letter of ${game.lastWord}
-    \nGame over score: ${game.score} | Level: ${game.level}`,
+    Game over score: ${game.score} | Level: ${game.level}`,
             mentions: [sender]
         })
         storage.games.chain.scores[from] = storage.games.chain.scores[from] || []
@@ -103,20 +103,20 @@ if(game.score % 10 === 0){
     game.timeLimit = Math.max(5, game.timeLimit - 5)
     await sock.sendMessage(from,{
         text:`Level up! Level ${game.level} reached. 
-        \n time per word is now ${game.timeLimit}`
+         time per word is now ${game.timeLimit}`
     })
 }
 saveStr(storage)
     await sock.sendMessage(from,{
         text:`Accepted. 
-        \n next ${word.slice(-1)}
-        \n time : ${game.timeLimit}s`
+         next ${word.slice(-1)}
+         time : ${game.timeLimit}s`
     })
 
     game.timer = setTimeout(async ()=>{
             await sock.sendMessage(from,{
                 text:`⏱Time's up, Game over nice try. 
-                \n score: ${game.score} | Level: ${game.level}`
+                 score: ${game.score} | Level: ${game.level}`
             })
             storage.games.chain.scores[from] = storage.games.chain.scores[from] || []
             storage.games.chain.scores[from].push({

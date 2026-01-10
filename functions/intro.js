@@ -46,14 +46,14 @@ async function intro_me(from, sock){
             text:`Yo everyone I am the greatly revered *OTAKU BOT 3000*🔥🔥🔥 
             but you can call me yobi🌚, im here to moderate all your bullshit 
             so you can behave like proper humans😊 Imagine even a bot knows y'all tripping . 
-            anyway i plan to make myself very useful\n
+            anyway i plan to make myself very useful
             whether or not you will have me , thank you😁`
         }
     )
 }
 async function menu(from, sock) {
     sock.sendMessage(from, {
-        text: `⚔OTAKU BOT 3000⚔
+        text: `⚔*OTAKU BOT 3000*⚔
         ~*BIO*~
         ⨳ *NICKNAME* : YOBI 🔥
         ⨳ *PREFIX* : !

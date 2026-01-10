@@ -36,7 +36,7 @@ async function antiSpam(sock, from, sender, oga) {
         if(count <= WARN_LIMIT){
             await sock.sendMessage(from, {
             text: `⚠ Niggaaww @${sender.split('@')[0]} stop spamming You deranged oaf😑.
-            \nYou got ${WARN_LIMIT - count} of ${WARN_LIMIT} warnings left before i kick your ass, bitch😒`,
+            You got ${WARN_LIMIT - count} of ${WARN_LIMIT} warnings left before i kick your ass, bitch😒`,
             mentions: [sender]
         });
         console.log("spam warning")
@@ -45,7 +45,7 @@ async function antiSpam(sock, from, sender, oga) {
             await sock.sendMessage(from, {
             text: `@${sender.split('@')[0]} i warned you but you decided that i was just
             yapping.
-            \nwell then kiss this group bye bye bitch😒`,
+            well then kiss this group bye bye bitch😒`,
             mentions: [sender]
             })
             await sock.groupParticipantsUpdate(from, [sender], "remove");

@@ -39,12 +39,13 @@ async function messageHandler(sock, msg) {
         console.log("sending rules...")
          await sock.sendMessage(from, {
             text:`⚔*HEAR HEE HEAR HEE THE RULES OF THIS ESTABLISHMENT*⚔
-            \n1. Links art fobidden heather in this establishment🔗
-            \n2. Thou shall not spam thine valueless words😑
-            \n3. Thou shall not act homo and get away with it🌈
-            \n And most importantly His Majesty the ever great ever awesome akira hero's word are absolute👑
+            1. Links art fobidden heather in this establishment🔗
+            2. Thou shall not spam thine valueless words😑
+            3. Thou shall not act homo and get away with it🌈
+            4. Thou shall not spoil the anime lest thou is gay 
+             And most importantly His Majesty the ever great ever awesome akira hero's word are absolute👑
             and thou must obey or die💀
-            \n Have a good time🥱`
+            Have a good time🥱`
         })
     }
     if(text.startsWith("!intro-me")){

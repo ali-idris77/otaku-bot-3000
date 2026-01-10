@@ -16,7 +16,7 @@ async function antiLink(sock, from , sender, text, oga){
         if(count <= WARN_LIMIT){
             await sock.sendMessage(from, {
             text: `⚠ Niggaaww @${sender.split('@')[0]} links are not allowed here DUMBASS😑.
-            \nThis is ${count} of ${WARN_LIMIT} before i kick your ass, bitch😒`,
+            This is ${count} of ${WARN_LIMIT} before i kick your ass, bitch😒`,
             mentions: [sender]
         });
         console.log("link warning")
@@ -25,7 +25,7 @@ async function antiLink(sock, from , sender, text, oga){
             await sock.sendMessage(from, {
             text: `@${sender.split('@')[0]} i warned you but you decided that i was just
             yapping.
-            \nwell then kiss this group bye bye bitch😒`,
+            well then kiss this group bye bye bitch😒`,
             mentions: [sender]
             })
             await sock.groupParticipantsUpdate(from, [sender], "remove");
