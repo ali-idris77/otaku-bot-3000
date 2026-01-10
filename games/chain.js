@@ -77,7 +77,6 @@ if(game.type === "wordChainJoin"){
                         text:` @${sender.split("@")[0]} joined the fun.`,
                         mentions:[sender]
                     })
-                    saveStr(storage)
                 }
                 return
 }
