@@ -2,7 +2,7 @@ const {antiLink} = require('../functions/antiLink')
 const {antiSpam} = require('../functions/antiSpam')
 const {adminKick} = require('../functions/adminKick')
 const {intro, intro_me, menu, scores} = require('../functions/intro')
-const {triviaUpd} = require('../functions/storageUpd')
+const {triviaUpd, emojiUpd} = require('../functions/storageUpd')
 const {greet, handleQues} = require('../functions/communicate')
 const {adminLock, adminUnlock} = require('../functions/adminLock')
 const {gameHandler} = require('../games/gameHandler')
@@ -34,6 +34,7 @@ async function messageHandler(sock, msg) {
         await adminUnlock(from, sender, OGA, sock)
     }
     await triviaUpd(sock, from, sender, text, OGA)
+    await emojiUpd(sock, from, sender, text, OGA)
     //general commands
     if(text.startsWith("!rules")){
         console.log("sending rules...")

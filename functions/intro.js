@@ -33,7 +33,7 @@ console.log("admins:", admins)
             break;
         default:
         sock.sendMessage(from, {
-            text:`some random dude or dudess who likes anime going by @${sender.split('@')[0]}`,
+            text:`some random dude or dudés who likes anime going by @${sender.split('@')[0]}`,
             mentions:[sender]
         })
             break;
@@ -53,7 +53,7 @@ async function intro_me(from, sock){
 }
 async function menu(from, sock) {
     sock.sendMessage(from, {
-        text: `⚔*OTAKU BOT 3000*⚔
+        text: `⚔ *OTAKU BOT 3000* ⚔
         ~*BIO*~
         ⨳ *NICKNAME* : YOBI 🔥
         ⨳ *PREFIX* : !
@@ -71,9 +71,9 @@ async function menu(from, sock) {
         ⨳antilink check
         ⨳antispam check
         ~*GAMES*~🕹
-        ⨳!games wordChain
-        ⨳!games trivia
-        ⨳!games emoji
+        ⨳!game wordChain
+        ⨳!game trivia
+        ⨳!game emoji
 > P.S: i know nothing, dont ask me shi , for now atleast😊
         `
     })
