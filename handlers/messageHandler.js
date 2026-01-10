@@ -1,6 +1,6 @@
 const {antiLink} = require('../functions/antiLink')
 const {antiSpam} = require('../functions/antiSpam')
-const {adminKick} = require('../functions/adminKick')
+const {adminKick, adminWarn} = require('../functions/adminKick')
 const {intro, intro_me, menu, scores} = require('../functions/intro')
 const {triviaUpd, emojiUpd} = require('../functions/storageUpd')
 const {greet, handleQues} = require('../functions/communicate')
@@ -10,6 +10,7 @@ const {gameHandler} = require('../games/gameHandler')
 
 async function messageHandler(sock, msg) {
     console.log("handling messages...", msg)
+    if(msg.messageStubType) return
     if(!msg.message || msg.key.fromMe) return
     const from = msg.key.remoteJid;
     const sender = msg.key.participant;
@@ -26,6 +27,9 @@ async function messageHandler(sock, msg) {
     //admin commands
     if(text.startsWith("!kick")){
         await adminKick(from, sender, OGA, msg, sock)
+    }
+    if(text.startsWith("!warn")){
+        await adminWarn(from, sender, OGA, msg, sock)
     }
     if(text.startsWith("!lock")){
         await adminLock(from, sender, OGA, sock)
