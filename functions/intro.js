@@ -59,6 +59,7 @@ async function menu(from, sock) {
         ⨳ *PREFIX* : !
         ~*ADMIN COMMANDS*~😎
         ⨳!kick
+        ⨳!warn
         ⨳!lock
         ⨳!unlock
         ~*USER COMMANDS*~👤

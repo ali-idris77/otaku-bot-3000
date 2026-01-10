@@ -1,4 +1,5 @@
 const {WARN_LIMIT} = require('../state/warnings')
+const {storage, saveStr} = require('../state/storage')
 async function adminKick(from, sender, oga, msg, sock){
       const metadata = await sock.groupMetadata(from);
     const admins = metadata.participants
@@ -47,7 +48,7 @@ console.log("admins:", admins)
         console.log(`Warning count for links ${sender} in ${from}: ${count}`)
         if(count <= WARN_LIMIT){
             await sock.sendMessage(from, {
-            text:`@${mentioned[0].split("@")[0]}, you have been warned by the admin. you got`,
+            text:`@${mentioned[0].split("@")[0]}, you have been warned by the admin. you got ${count} of ${WARN_LIMIT} warnings before u get kicked😑.`,
       mentions: mentioned
         });
         console.log("warning")

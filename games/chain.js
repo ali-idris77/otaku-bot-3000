@@ -94,11 +94,6 @@ if(game.type === "wordChainJoin"){
   }
 
   if(game.lastWord && word[0] !== game.lastWord.slice(-1)){
-    await sock.sendMessage(from, {
-        text:`Your answer ${word}'s first letter doesn't match the first letter of ${game.lastWord}
-    Game over score: ${game.score} | Level: ${game.level}`,
-            mentions: [sender]
-        })
         return await eliminatePlayer(sock, from, sender, `Your answer ${word}'s first letter doesn't match the first letter of ${game.lastWord}`) 
 }
 game.usedWords.push(word)
@@ -110,14 +105,14 @@ if(game.usedWords.length % 10 === 0){
     game.level += 1
     game.timeLimit = Math.max(5, game.timeLimit - 5)
     await sock.sendMessage(from,{
-        text:`Level up! Level ${game.level} reached. 
+        text:`💥Level up! Level ${game.level} reached. 
          time per word is now ${game.timeLimit}`
     })
 }
 saveStr(storage)
     await sock.sendMessage(from,{
         text:`Accepted. 
-        @${game.players[game.currentPlayerIndex].split('@')[0]} its your turn
+        🕹@${game.players[game.currentPlayerIndex].split('@')[0]} its your turn
          next ${word.slice(-1)} 
          time : ${game.timeLimit}s`,
          mentions:[game.players[game.currentPlayerIndex]]
@@ -136,16 +131,16 @@ async function eliminatePlayer(sock, from, sender, reason){
 const game = storage.games.active[from]
 if(!game)return
 await sock.sendMessage(from, {
-    text:`@${sender.split('@')[0]} you've been eliminated
+    text:`❌@${sender.split('@')[0]} you've been eliminated
     ${reason}`,
     mentions:[sender]
 })
 game.players = game.players.filter(p => p !== sender)
 if(game.players.length === 1){
     await sock.sendMessage(from,{
-        text:`And we have a winner
+        text:`🏆And we have a winner
         @${game.players[0].split('@')[0]} you have defeated all the other losers
-        HOLD YOUR HEAD HIGH!!!`,
+        HOLD YOUR HEAD HIGH!!!✊✊`,
         mentions:[game.players[0]]
     })
     const scr = formatScore(game.score)
