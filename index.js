@@ -6,7 +6,8 @@ async function startBot() {
     console.log("starting....")
     const {state, saveCreds} = await useMultiFileAuthState('./auth_info')
     const sock = makeWASocket({
-        auth: state
+        auth: state,
+        syncFullHistory: false
     });
     sock.ev.on("creds.update", saveCreds);
     
