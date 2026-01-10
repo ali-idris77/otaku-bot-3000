@@ -60,7 +60,7 @@ async function wordChain(sock, from, sender, text, isContinuation = false) {
         saveStr(storage)
                     }, 30_000)
 
-        return saveStr(storage)
+        return 
     }
 
                
@@ -77,6 +77,7 @@ if(game.type === "wordChainJoin"){
                         text:` @${sender.split("@")[0]} joined the fun.`,
                         mentions:[sender]
                     })
+                    saveStr(storage)
                 }
                 return
 }
