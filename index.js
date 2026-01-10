@@ -19,7 +19,11 @@ async function startBot() {
         if(connection === "open"){
             console.log("connected")
         }else if(connection === "close"){
+            const shouldRec = lastDisconnect?.error?.output?.statusCode !== 401
             console.log("disconnected", lastDisconnect?.error)
+            if(shouldRec){
+                startBot()
+            }
         }
     })
     //message handler
