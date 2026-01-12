@@ -6,87 +6,22 @@ function getRandom(exclude=[]){
 }
 
 async function wordChain(sock, from, sender, text, isContinuation = false) {
-    if(!text && isContinuation) return
-
     //init str if missing
     if(!storage.games.active) storage.games.active = {};
+    let game = storage.games.active[from]
+    if(game && game.gtype === 'play'){
+        console.log("playing...",game)
+        const currentPlayer = game.players[game.currentPlayerIndex]
 
-    //start game
-    if(!isContinuation){
-         storage.games.active[from]= {
-                        type: "wordChainJoin",
-                        players : [],
-                        joinTimer : null
-                    }
-            await sock.sendMessage(from, {
-                text:`Ok my fellow dudes and dudés, its time for word chaaaaiin so if you're interested
-                just send in *join* to _ofcourse_ join the FUUUN
-                joining wiill take 30s after that no one else can join let's gooo kono kusaritachidomoooo`
-            })
-                
-                storage.games.active[from].joinTimer = setTimeout(async ()=>{
-                    const game = storage.games.active[from]
-                        if(game.players.length <= 0){
-                            await sock.sendMessage(from, {
-                                text:`No one wants to play so the game is cancelled, good bye`
-                            })
-                            delete storage.games.active[from]
-                            return saveStr(storage)
-                        }
-        const firstWord = getRandom()
-        storage.games.active[from] = {
-            type: 'wordChain',
-            lastWord: firstWord,
-            usedWords:[firstWord],
-            score:{},
-            level:1,
-            timeLimit: 25,
-            timer: null,
-            currentPlayerIndex: 0,
-            players : game.players
-        }
-        console.log(storage.games.active[from])
-        await sock.sendMessage(from,{
-            text:`Aiiit 😁 anime word chain starting now👏
-        Reply with an anime character name or attack🤜 with a first letter thats
-        the same as the last letter of the previous word👈
-        The warriors ${game.players.map(p => '@'+p.split('@')[0]).join(', ')}
-        You have 25s for this level ⏱
-        The first word is *${firstWord}*
-        Let's gooo`,
-        mentions:game.players
-        })
-        startTurn(sock, from)
-        saveStr(storage)
-                    }, 30_000)
-
-        return 
-    }
-
-               
-
-//continuation
-if(!game) return
-const game = storage.games.active[from]
-if(game.type === "wordChainJoin"){
-    if(text.toLowerCase() !== "join") return
-
-     if(!game.players.includes(sender)){
-                    game.players.push(sender)
-                    await sock.sendMessage(from, {
-                        text:` @${sender.split("@")[0]} joined the fun.`,
-                        mentions:[sender]
-                    })
-                    saveStr(storage)
-                }
-                return
+ if(sender !== currentPlayer) {
+    console.log("not this player's turn", currentPlayer)
+    return
 }
-
-  if(game.type !=="wordChain") return
- const currentPlayer = game.players[game.currentPlayerIndex]
-
- if(sender !== currentPlayer) return
-  if(game.timer) clearTimeout(game.timer)
+console.log(game.timer)
+  if(game.timer){
+    console.log("clearing time")
+    clearTimeout(game.timer)
+    }
     const word = text.trim().toLowerCase()
 
   if(game.usedWords.includes(word)){
@@ -100,7 +35,7 @@ game.usedWords.push(word)
 game.lastWord = word
 game.currentPlayerIndex = (game.currentPlayerIndex + 1) % game.players.length
 game.score[sender] = (game.score[sender] || 0) + 1
-
+console.log("game", game)
 if(game.usedWords.length % 10 === 0){
     game.level += 1
     game.timeLimit = Math.max(5, game.timeLimit - 5)
@@ -118,8 +53,81 @@ saveStr(storage)
          mentions:[game.players[game.currentPlayerIndex]]
     })
     startTurn(sock, from)
-    saveStr(storage)
+    }
+    if(game && game.gtype === 'join'){
+         if(text.toLowerCase() !== "join") return
+
+     if(!game.players.includes(sender)){
+                    game.players.push(sender)
+                    await sock.sendMessage(from, {
+                        text:` @${sender.split("@")[0]} joined the fun.`,
+                        mentions:[sender]
+                    })
+                }
+                return
+    }
+    console.log("startin", game)
+    //start game
+    if(!isContinuation){
+         storage.games.active[from]= {
+                        type: "wordChain",
+                        gtype: "join",
+                        players : [],
+                        joinTimer : null
+                    }
+            game = storage.games.active[from]       
+            await sock.sendMessage(from, {
+                text:`Ok my fellow dudes and dudés, its time for word chaaaaiin so if you're interested
+                just send in *join* to _ofcourse_ join the FUUUN
+                joining wiill take 30s after that no one else can join let's gooo kono kusaritachidomoooo`
+            })
+                
+                game.joinTimer = setTimeout(async ()=>{
+                   await startGame(sock, from)
+                }, 30_000)
+console.log("started", game)
+        return 
+    }
+
 }
+async function startGame(sock, from){
+    const joinGame = storage.games.active[from]
+    console.log("join timeout",joinGame)
+        if(!joinGame || joinGame.players.length <= 0){
+            await sock.sendMessage(from, {
+                text:`No one wants to play so the game is cancelled, good bye`
+            })
+            delete storage.games.active[from]
+            return saveStr(storage)
+        }
+        const firstWord = getRandom()
+        storage.games.active[from] = {
+            type: 'wordChain',
+            gtype: 'play',
+            lastWord: firstWord,
+            usedWords:[firstWord],
+            score:{},
+            level:1,
+            timeLimit: 25,
+            timer: null,
+            currentPlayerIndex: 0,
+            players : joinGame.players
+        }
+        saveStr(storage)
+        const game = storage.games.active[from]
+        console.log(game)
+        await sock.sendMessage(from,{
+            text:`Aiiit 😁 anime word chain starting now👏
+        Reply with an anime character name or attack🤜 with a first letter thats
+        the same as the last letter of the previous word👈
+        The warriors ${game.players.map(p => '@'+p.split('@')[0]).join(', ')}
+        You have 25s for this level ⏱
+        The first word is *${firstWord}*
+        Let's gooo`,
+        mentions:game.players
+        })
+        startTurn(sock, from)        
+                    }
 function startTurn(sock, from){
 const game = storage.games.active[from]
 const player = game.players[game.currentPlayerIndex]
@@ -155,7 +163,6 @@ return saveStr(storage)
 }
 game.currentPlayerIndex %= game.players.length
 startTurn(sock, from)
-saveStr(storage)
 }
 function formatScore(score){
     let mentions = []
