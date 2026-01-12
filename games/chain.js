@@ -159,7 +159,8 @@ if(game.players.length === 1){
     storage.games.chain.scores[from] = storage.games.chain.scores[from] || []
     storage.games.chain.scores[from].push({date: Date.now(),scores:game.score}) 
 delete storage.game.active[from]
-return saveStr(storage)
+saveStr(storage)
+return 
 }
 game.currentPlayerIndex %= game.players.length
 startTurn(sock, from)
