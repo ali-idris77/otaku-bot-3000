@@ -6,11 +6,12 @@ function getRandom(exclude=[]){
 }
 
 async function wordChain(sock, from, sender, text, isContinuation = false) {
+    if(!text)return
     //init str if missing
     if(!storage.games.active) storage.games.active = {};
     let game = storage.games.active[from]
     if(game && game.gtype === 'play'){
-        console.log("playing...",game)
+        console.log("playing...")
         const currentPlayer = game.players[game.currentPlayerIndex]
 
  if(sender !== currentPlayer) {
@@ -29,7 +30,7 @@ console.log(game.timer)
   }
 
   if(game.lastWord && word[0] !== game.lastWord.slice(-1)){
-        return await eliminatePlayer(sock, from, sender, `Your answer ${word}'s first letter doesn't match the first letter of ${game.lastWord}`) 
+        return await eliminatePlayer(sock, from, sender, `💔Your answer ${word}'s first letter doesn't match the first letter of ${game.lastWord}`) 
 }
 game.usedWords.push(word)
 game.lastWord = word
@@ -37,6 +38,7 @@ game.currentPlayerIndex = (game.currentPlayerIndex + 1) % game.players.length
 game.score[sender] = (game.score[sender] || 0) + 1
 console.log("game", game)
 if(game.usedWords.length % 10 === 0){
+    console.log("level up", game.usedWords.length)
     game.level += 1
     game.timeLimit = Math.max(5, game.timeLimit - 5)
     await sock.sendMessage(from,{
@@ -46,7 +48,7 @@ if(game.usedWords.length % 10 === 0){
 }
 saveStr(storage)
     await sock.sendMessage(from,{
-        text:`Accepted. 
+        text:`✅ Accepted. 
         🕹@${game.players[game.currentPlayerIndex].split('@')[0]} its your turn
          next ${word.slice(-1)} 
          time : ${game.timeLimit}s`,
@@ -60,7 +62,7 @@ saveStr(storage)
      if(!game.players.includes(sender)){
                     game.players.push(sender)
                     await sock.sendMessage(from, {
-                        text:` @${sender.split("@")[0]} joined the fun.`,
+                        text:`♟ @${sender.split("@")[0]} joined the fun.`,
                         mentions:[sender]
                     })
                 }
@@ -77,9 +79,9 @@ saveStr(storage)
                     }
             game = storage.games.active[from]       
             await sock.sendMessage(from, {
-                text:`Ok my fellow dudes and dudés, its time for word chaaaaiin so if you're interested
-                just send in *join* to _ofcourse_ join the FUUUN
-                joining wiill take 30s after that no one else can join let's gooo kono kusaritachidomoooo`
+    text:`Ok my fellow dudes and dudés😁, its time for word chaaaaiin so if you're interested 
+    just send in *join* to _ofcourse_ join the FUUUN👾
+    joining wiill take 30s after that no one else can join let's gooo kono kusariyodomoooo😈😈`
             })
                 
                 game.joinTimer = setTimeout(async ()=>{
@@ -95,7 +97,7 @@ async function startGame(sock, from){
     console.log("join timeout",joinGame)
         if(!joinGame || joinGame.players.length <= 0){
             await sock.sendMessage(from, {
-                text:`No one wants to play so the game is cancelled, good bye`
+                text:`No one wants to play so the game is cancelled, good bye🥺`
             })
             delete storage.games.active[from]
             return saveStr(storage)
@@ -158,7 +160,7 @@ if(game.players.length === 1){
     })
     storage.games.chain.scores[from] = storage.games.chain.scores[from] || []
     storage.games.chain.scores[from].push({date: Date.now(),scores:game.score}) 
-delete storage.game.active[from]
+     delete storage.games.active[from]
 saveStr(storage)
 return 
 }

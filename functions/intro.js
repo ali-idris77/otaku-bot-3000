@@ -64,7 +64,7 @@ async function menu(from, sock) {
         ⨳!unlock
         ~*USER COMMANDS*~👤
         ⨳!rules
-        ⨳!intro
+        ⨳!ntro
         ⨳!intro-me
         ⨳!menu
         ⨳!scores

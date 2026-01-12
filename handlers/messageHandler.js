@@ -56,7 +56,7 @@ async function messageHandler(sock, msg) {
     if(text.startsWith("!intro-me")){
         await intro(from,sender,OGA,sock)
     }
-    if(text.startsWith("!intro")){
+    if(text.startsWith("!ntro")){
         await intro_me(from,sock)
     }
     if(text.startsWith("!menu")){
