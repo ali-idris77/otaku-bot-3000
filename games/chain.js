@@ -6,7 +6,7 @@ function getRandom(exclude=[]){
 }
 
 async function wordChain(sock, from, sender, text, isContinuation = false) {
-    if(!text)return
+    if(!text && isContinuation) return
     //init str if missing
     if(!storage.games.active) storage.games.active = {};
     let game = storage.games.active[from]
@@ -95,9 +95,10 @@ console.log("started", game)
 async function startGame(sock, from){
     const joinGame = storage.games.active[from]
     console.log("join timeout",joinGame)
-        if(!joinGame || joinGame.players.length <= 0){
+        if(!joinGame || joinGame.players.length < 2){
             await sock.sendMessage(from, {
-                text:`No one wants to play so the game is cancelled, good bye🥺`
+                text:`Not enough players to play so the game is cancelled, good bye🥺
+                _minimum_ 2 players`
             })
             delete storage.games.active[from]
             return saveStr(storage)

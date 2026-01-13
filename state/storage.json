@@ -157,6 +157,50 @@
         ]
       }
     },
+    "chainOne": {
+      "starter": [
+        "Hinata",
+        "Killua",
+        "Rukia",
+        "beezulbub",
+        "freecs",
+        "whitebeard",
+        "blackbeard",
+        "brownbeard",
+        "loid",
+        "kirie",
+        "Ace",
+        "Don-krieg",
+        "Lao-G",
+        "Esdeath",
+        "bertholdt",
+        "itachi",
+        "kakashi",
+        "Enel",
+        "Gan-Fall",
+        "Brook",
+        "hancock",
+        "gon",
+        "kon",
+        "soifon",
+        "obito",
+        "raizo",
+        "yeager",
+        "kruger",
+        "chopper",
+        "trunks",
+        "reiss",
+        "bertholomew",
+        "drake-x",
+        "brolly",
+        "biscuit",
+        "doffy",
+        "Android18",
+        "Android17",
+        "Android16"
+      ],
+      "scores": {}
+    },
     "trivia": {
       "questions": [
         {
@@ -201,6 +245,321 @@
           "question": "what is zoro's first sword name",
           "ans": [
             "wado ichi monji"
+          ]
+        },
+        {
+          "id": "d48c0873-3abf-49bd-ad22-7bcce585cb83",
+          "question": "In Inuyasha, what are the heroes looking to collect?",
+          "ans": [
+            "jewel shards"
+          ]
+        },
+        {
+          "id": "56326b0f-e887-4d51-9a5d-ff1b48498906",
+          "question": "Which animation studio animated Hidamari Sketch?",
+          "ans": [
+            "shaft",
+            "shaft"
+          ]
+        },
+        {
+          "id": "af665a94-9610-4596-a3f2-093c9a09b53d",
+          "question": "Who is the main character in One Piece?",
+          "ans": [
+            "monkey d luffy",
+            "luffy"
+          ]
+        },
+        {
+          "id": "33e56378-9c30-4b1b-aeef-9e805e85c70c",
+          "question": "What is the last line muttered in the anime film The End of Evangelion?",
+          "ans": [
+            "how disgusting."
+          ]
+        },
+        {
+          "id": "560996bf-92ad-4be6-bd9b-dbe9ddf07d4b",
+          "question": "My Hero Academia main character Midoriya goes by what superhero name?",
+          "ans": [
+            "deku",
+            "deku"
+          ]
+        },
+        {
+          "id": "1a783d8f-a33f-4bcd-9f59-41d10ebc2f8b",
+          "question": "In the anime Seven Deadly Sins what is the name of one of the sins?",
+          "ans": [
+            "diane",
+            "diane"
+          ]
+        },
+        {
+          "id": "dcb8ccb6-e945-4d7e-bd11-689c0afdcaef",
+          "question": "Who was the Author of the manga Monster Hunter Orage?",
+          "ans": [
+            "hiro mashima",
+            "hiro",
+            "mashima"
+          ]
+        },
+        {
+          "id": "e620b3e7-bc73-4868-865b-1f26650278a9",
+          "question": "In To Love-Ru, who is the first to hear of Yami past from her?",
+          "ans": [
+            "rito",
+            "rito"
+          ]
+        },
+        {
+          "id": "e3267c26-c966-4e54-ab96-0fd98e1d9754",
+          "question": "What is the name of the protagonist of the 2017 anime Land of the Lustrous?",
+          "ans": [
+            "phosphophyllite",
+            "phosphophyllite"
+          ]
+        },
+        {
+          "id": "415dc915-00b2-4a16-bf49-2008a7d5f73f",
+          "question": "In the To Love-Ru series, how many Trans-weapons were created?",
+          "ans": [
+            "3",
+            "3"
+          ]
+        },
+        {
+          "id": "be8ea0cf-0d83-40ff-b4b7-19ec93ebb984",
+          "question": "Which of the stands from JoJo Bizarre Adventure mimics the likeness of a tomato?",
+          "ans": [
+            "pearl jam",
+            "pearl",
+            "jam"
+          ]
+        },
+        {
+          "id": "a73842c3-a197-4c40-919a-d5a2281fe498",
+          "question": "What is the name of the final villain in the manga series Bleach?",
+          "ans": [
+            "yhwach",
+            "yhwach"
+          ]
+        },
+        {
+          "id": "232b701f-55f2-4449-87f3-eeaf3b00e081",
+          "question": "Which Japanese music group was formed to produce theme music for the anime Guilty Crown?",
+          "ans": [
+            "egoist",
+            "egoist"
+          ]
+        },
+        {
+          "id": "2bfef164-efa9-445c-ba10-1cf8eb6d12a2",
+          "question": "In JoJo Bizarre Adventure, which character is able to accelerate time?",
+          "ans": [
+            "enrico pucci",
+            "enrico",
+            "pucci"
+          ]
+        },
+        {
+          "id": "7243e540-9846-4f41-b2f5-c74f0bb5fc9c",
+          "question": "In One Piece, which one of the following is NOT an Ancient Weapon?",
+          "ans": [
+            "jupiter",
+            "jupiter"
+          ]
+        },
+        {
+          "id": "ff4f4b95-c31e-4005-9180-22875c594ca9",
+          "question": "What sport is being played in the Anime Eyeshield 21?",
+          "ans": [
+            "american football",
+            "american",
+            "football"
+          ]
+        },
+        {
+          "id": "eaff2ddc-d10c-4fe2-a0e3-f92e930ec852",
+          "question": "Who is the true moon princess in Sailor Moon?",
+          "ans": [
+            "sailor moon",
+            "sailor",
+            "moon"
+          ]
+        },
+        {
+          "id": "c940fc9a-e2a2-4b26-b97d-f8c520cb0069",
+          "question": "In Little Witch Academia, what is Shiny Chariot alias at Luna Nova Academy?",
+          "ans": [
+            "ursula callistis",
+            "ursula",
+            "callistis"
+          ]
+        },
+        {
+          "id": "d2c473bd-e553-45bd-a4f8-63e21dcc02fc",
+          "question": "Who was a voice actor for the English dubbing of HOWL MOVING CASTLE (2004)?",
+          "ans": [
+            "christian bale",
+            "bale"
+          ]
+        },
+        {
+          "id": "3d64fadf-c43f-4edf-8736-f524679c38ce",
+          "question": "What year was JoJo Bizarre Adventure: Phantom Blood first released?",
+          "ans": [
+            "1987",
+            "1987"
+          ]
+        },
+        {
+          "id": "9de01d2f-09e4-47db-8c94-85d6e9c24266",
+          "question": "In JoJo Bizarre Adventure: Stardust Crusaders, what is the last name of the protagonist Jotaro?",
+          "ans": [
+            "kujo",
+            "kujo"
+          ]
+        },
+        {
+          "id": "837c511e-f169-4d55-bdca-f826af0965f7",
+          "question": "What was studio Trigger first original long-form animated series for television?",
+          "ans": [
+            "kill la kill"
+          ]
+        },
+        {
+          "id": "31a286ef-d2d2-4c19-b890-e5249090b07a",
+          "question": "In the Dragon Ball franchise, what is the name of Goku brother?",
+          "ans": [
+            "raditz",
+            "raditz"
+          ]
+        },
+        {
+          "id": "6c28c33f-5716-4f6f-bac5-eb81e3ad2024",
+          "question": "In Hunter x Hunter, what are members in Killua family known for being?",
+          "ans": [
+            "assassins",
+            "assassins"
+          ]
+        },
+        {
+          "id": "122f04df-c77e-447a-8d17-c3ecd5f923dc",
+          "question": "Who wrote and directed the animated movie Spirited Away (2001)?",
+          "ans": [
+            "hayao miyazaki",
+            "hayao",
+            "miyazaki"
+          ]
+        },
+        {
+          "id": "74e4b0d9-5121-4c36-8e17-12e617bc0ef6",
+          "question": "In the 9th Pokemon movie, who is the Prince of the Sea?",
+          "ans": [
+            "manaphy",
+            "manaphy"
+          ]
+        },
+        {
+          "id": "36144f61-79fe-4ea2-b903-2b92a3ddb3fc",
+          "question": "The main protagonist of the fifth part of JoJo Bizarre Adventure is ?",
+          "ans": [
+            "giorno giovanna",
+            "giorno",
+            "giovanna"
+          ]
+        },
+        {
+          "id": "f8706060-dbc4-4042-91ec-77eb774ff76c",
+          "question": "In the 2012 animated film Wolf Children, what are the names of the wolf children?",
+          "ans": [
+            "ame yuki",
+            "ame",
+            "yuki"
+          ]
+        },
+        {
+          "id": "0c9b4905-0a32-4e49-a376-4c95cd20eb87",
+          "question": "What year did Attack on Titan Season 2 begin airing?",
+          "ans": [
+            "2017",
+            "2017"
+          ]
+        },
+        {
+          "id": "657e472d-f98e-4d3d-a0bc-699a49c53376",
+          "question": "Which part from the JoJo Bizarre Adventure manga is about a horse race across America?",
+          "ans": [
+            "part 7: steel ball run"
+          ]
+        },
+        {
+          "id": "cc408fa8-efb2-45fe-9767-c5d94992ecdf",
+          "question": "In JoJo Bizarre Adventure, which of the following Stands does NOT have a time-based ability?",
+          "ans": [
+            "20th century boy",
+            "20th",
+            "century",
+            "boy"
+          ]
+        },
+        {
+          "id": "65910e8a-367b-4c86-99a9-93c5d08b7ceb",
+          "question": "Which person from JoJo Bizarre Adventure does NOT house a reference to a band, artist, or song earlier than 1980?",
+          "ans": [
+            "giorno giovanna",
+            "giorno",
+            "giovanna"
+          ]
+        },
+        {
+          "id": "c5535752-54fb-415d-be31-4918a35e5aa7",
+          "question": "In Pok&eacute;mon Chronicles, why was Misty afraid of Gyarados?",
+          "ans": [
+            "she crawled into it mouth as a baby."
+          ]
+        },
+        {
+          "id": "dc56c184-b07d-4efa-888e-ef06e9b34006",
+          "question": "Which of these is not a world in the anime Buddyfight?",
+          "ans": [
+            "ancient dragon world"
+          ]
+        },
+        {
+          "id": "56ebfee1-27ad-4729-982e-bd36011ad799",
+          "question": "What is the name of Funny Valentine stand in Jojo Bizarre Adventure Part 7, Steel Ball Run?",
+          "ans": [
+            "dirty deeds done dirt cheap"
+          ]
+        },
+        {
+          "id": "46955abe-cf3c-4c59-8e6b-a8387b756914",
+          "question": "In Toriko, which of the following Heavenly Kings has an enhanced sense of Hearing?",
+          "ans": [
+            "zebra",
+            "zebra"
+          ]
+        },
+        {
+          "id": "8d8d3e38-504d-4c9b-ad8e-def3980b4276",
+          "question": "Which anime heavily features music from the genre Eurobeat?",
+          "ans": [
+            "initial d"
+          ]
+        },
+        {
+          "id": "b1428b01-99c2-4e05-862e-1f8a6b75baf6",
+          "question": "In To Love-Ru, Ren and Run are from what planet?",
+          "ans": [
+            "memorze",
+            "memorze"
+          ]
+        },
+        {
+          "id": "fefd3138-f3e0-451f-bc64-fa04332a4364",
+          "question": "In Toriko, which of the following foods is knowingly compatible with Toriko?",
+          "ans": [
+            "poison potato"
           ]
         }
       ],

@@ -73,6 +73,7 @@ async function menu(from, sock) {
         ⨳antispam check
         ~*GAMES*~🕹
         ⨳!game wordChain
+        ⨳!game wordChainS
         ⨳!game trivia
         ⨳!game emoji
 > P.S: i know nothing, dont ask me shi , for now atleast😊

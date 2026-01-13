@@ -2,10 +2,12 @@ const {storage, saveStr} = require('../state/storage')
 const wordChain = require('./chain')
 const trivia = require('./trivia')
 const emoji = require('./emoji')
+const wordChainS = require('./chainone')
 const games = {
     trivia,
     wordChain,
-    emoji
+    emoji,
+    wordChainS
 }
 const CMD = "!"
 async function gameHandler(sock, from, sender, text) {
@@ -38,7 +40,22 @@ async function gameHandler(sock, from, sender, text) {
         await game(sock, from, sender, text)
         console.log("starting game")
         return
-        }else if(command.toLowerCase() !== "game"){
+        }else if(command.toLowerCase() === "endgame"){
+            if(activeGame){
+            console.log("ending game")
+            delete storage.games.active?.[from]
+            saveStr(storage)
+            await sock.sendMessage(from, {
+                text:"Ending game....😶"
+            })  
+            }else{
+                console.log("no active game")
+                await sock.sendMessage(from, {
+                text:"Not playing any game tho....😕"
+            })
+            }
+            return
+        }else if(command.toLowerCase() !== "game" && command.toLowerCase() !== "endgame"){
             console.log("not a game command")
             return
         }

@@ -11,7 +11,7 @@ const questions = storage.games.trivia.questions
         const session = storage.games.active[from]
         console.log("nextQue session:", session)
         if(!session)return
-        if(session.questionsIndex >= 3 || session.availableQues.length === 0 ){
+        if(session.questionsIndex >= 5 || session.availableQues.length === 0 ){
             console.log("ending trivia")
            await  endTrivia(sock, from)
             return
@@ -22,12 +22,14 @@ const questions = storage.games.trivia.questions
         session.usedThisSession.push(que.id)
         console.log("sending next que")
         await sock.sendMessage(from, {
-            text:`❔${que.question} 20s`
+            text:`❔Next question:
+            ${que.question} 
+            20s`
         })
         session.timer = setTimeout(async ()=>{
             await sock.sendMessage(from,{
                 text:`⏱Time's up, correct answer is ${que.ans[0]}. 
-                 next question:`
+                `
             })
             session.questionsIndex += 1
             await nextQue(sock, from, sender, text)
@@ -57,7 +59,8 @@ async function trivia(sock, from, sender, text, isContinuation = false){
             text:`Okayy😁 time for anime trivia👏
         Reply with the correct answer to the question given
         Y'all have 20s for each question⏱
-        The first to get the correct answer scores >(be careful with spellings tho)
+        The first to get the correct answer scores 
+        (be careful with spellings tho)
         Let's gooo`
         })
         await nextQue(sock, from, sender, text)
