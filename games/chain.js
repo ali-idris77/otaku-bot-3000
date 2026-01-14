@@ -30,7 +30,7 @@ console.log(game.timer)
   }
 
   if(game.lastWord && word[0] !== game.lastWord.slice(-1)){
-        return await eliminatePlayer(sock, from, sender, `💔Your answer ${word}'s first letter doesn't match the first letter of ${game.lastWord}`) 
+        return await eliminatePlayer(sock, from, sender, `💔Your answer ${word}'s first letter doesn't match the last letter of ${game.lastWord}`) 
 }
 game.usedWords.push(word)
 game.lastWord = word

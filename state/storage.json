@@ -171,7 +171,6 @@
         "kirie",
         "Ace",
         "Don-krieg",
-        "Lao-G",
         "Esdeath",
         "bertholdt",
         "itachi",
@@ -241,8 +240,8 @@
           ]
         },
         {
-          "id": "q6",
-          "question": "what is zoro's first sword name",
+          "id": "q",
+          "question": "at is zoro's first sword name",
           "ans": [
             "wado ichi monji"
           ]
@@ -258,7 +257,6 @@
           "id": "56326b0f-e887-4d51-9a5d-ff1b48498906",
           "question": "Which animation studio animated Hidamari Sketch?",
           "ans": [
-            "shaft",
             "shaft"
           ]
         },
@@ -281,16 +279,14 @@
           "id": "560996bf-92ad-4be6-bd9b-dbe9ddf07d4b",
           "question": "My Hero Academia main character Midoriya goes by what superhero name?",
           "ans": [
-            "deku",
             "deku"
           ]
         },
         {
           "id": "1a783d8f-a33f-4bcd-9f59-41d10ebc2f8b",
-          "question": "In the anime Seven Deadly Sins what is the name of one of the sins?",
+          "question": "In the anime Seven Deadly Sins what is the name of the sin of gluttony?",
           "ans": [
-            "diane",
-            "diane"
+            "merlin"
           ]
         },
         {
@@ -306,7 +302,6 @@
           "id": "e620b3e7-bc73-4868-865b-1f26650278a9",
           "question": "In To Love-Ru, who is the first to hear of Yami past from her?",
           "ans": [
-            "rito",
             "rito"
           ]
         },
@@ -314,7 +309,6 @@
           "id": "e3267c26-c966-4e54-ab96-0fd98e1d9754",
           "question": "What is the name of the protagonist of the 2017 anime Land of the Lustrous?",
           "ans": [
-            "phosphophyllite",
             "phosphophyllite"
           ]
         },
@@ -322,7 +316,6 @@
           "id": "415dc915-00b2-4a16-bf49-2008a7d5f73f",
           "question": "In the To Love-Ru series, how many Trans-weapons were created?",
           "ans": [
-            "3",
             "3"
           ]
         },
@@ -339,7 +332,6 @@
           "id": "a73842c3-a197-4c40-919a-d5a2281fe498",
           "question": "What is the name of the final villain in the manga series Bleach?",
           "ans": [
-            "yhwach",
             "yhwach"
           ]
         },
@@ -347,7 +339,6 @@
           "id": "232b701f-55f2-4449-87f3-eeaf3b00e081",
           "question": "Which Japanese music group was formed to produce theme music for the anime Guilty Crown?",
           "ans": [
-            "egoist",
             "egoist"
           ]
         },
@@ -364,7 +355,6 @@
           "id": "7243e540-9846-4f41-b2f5-c74f0bb5fc9c",
           "question": "In One Piece, which one of the following is NOT an Ancient Weapon?",
           "ans": [
-            "jupiter",
             "jupiter"
           ]
         },
@@ -372,18 +362,14 @@
           "id": "ff4f4b95-c31e-4005-9180-22875c594ca9",
           "question": "What sport is being played in the Anime Eyeshield 21?",
           "ans": [
-            "american football",
-            "american",
-            "football"
+            "american football"
           ]
         },
         {
           "id": "eaff2ddc-d10c-4fe2-a0e3-f92e930ec852",
           "question": "Who is the true moon princess in Sailor Moon?",
           "ans": [
-            "sailor moon",
-            "sailor",
-            "moon"
+            "sailor moon"
           ]
         },
         {
@@ -407,7 +393,6 @@
           "id": "3d64fadf-c43f-4edf-8736-f524679c38ce",
           "question": "What year was JoJo Bizarre Adventure: Phantom Blood first released?",
           "ans": [
-            "1987",
             "1987"
           ]
         },
@@ -415,7 +400,6 @@
           "id": "9de01d2f-09e4-47db-8c94-85d6e9c24266",
           "question": "In JoJo Bizarre Adventure: Stardust Crusaders, what is the last name of the protagonist Jotaro?",
           "ans": [
-            "kujo",
             "kujo"
           ]
         },
@@ -430,7 +414,6 @@
           "id": "31a286ef-d2d2-4c19-b890-e5249090b07a",
           "question": "In the Dragon Ball franchise, what is the name of Goku brother?",
           "ans": [
-            "raditz",
             "raditz"
           ]
         },
@@ -438,7 +421,6 @@
           "id": "6c28c33f-5716-4f6f-bac5-eb81e3ad2024",
           "question": "In Hunter x Hunter, what are members in Killua family known for being?",
           "ans": [
-            "assassins",
             "assassins"
           ]
         },
@@ -455,7 +437,6 @@
           "id": "74e4b0d9-5121-4c36-8e17-12e617bc0ef6",
           "question": "In the 9th Pokemon movie, who is the Prince of the Sea?",
           "ans": [
-            "manaphy",
             "manaphy"
           ]
         },
@@ -481,7 +462,6 @@
           "id": "0c9b4905-0a32-4e49-a376-4c95cd20eb87",
           "question": "What year did Attack on Titan Season 2 begin airing?",
           "ans": [
-            "2017",
             "2017"
           ]
         },
@@ -496,10 +476,7 @@
           "id": "cc408fa8-efb2-45fe-9767-c5d94992ecdf",
           "question": "In JoJo Bizarre Adventure, which of the following Stands does NOT have a time-based ability?",
           "ans": [
-            "20th century boy",
-            "20th",
-            "century",
-            "boy"
+            "20th century boy"
           ]
         },
         {
@@ -536,7 +513,6 @@
           "id": "46955abe-cf3c-4c59-8e6b-a8387b756914",
           "question": "In Toriko, which of the following Heavenly Kings has an enhanced sense of Hearing?",
           "ans": [
-            "zebra",
             "zebra"
           ]
         },
@@ -551,7 +527,6 @@
           "id": "b1428b01-99c2-4e05-862e-1f8a6b75baf6",
           "question": "In To Love-Ru, Ren and Run are from what planet?",
           "ans": [
-            "memorze",
             "memorze"
           ]
         },
@@ -576,9 +551,9 @@
       "usedLastSession": {
         "120363423586943230@g.us": [
           "q1",
-          "q6",
+          "q",
           "q4"
-        ]
+      ]
       }
     },
     "emoji": {
@@ -601,7 +576,7 @@
         },
         {
           "id": "q3",
-          "question": "🐱‍👤🦊",
+          "question": "🍥🍜🦊",
           "ans": [
             "naruto"
           ]
@@ -628,6 +603,354 @@
           "ans": [
             "bakugo",
             "bakugou"
+          ]
+        }
+      ,
+        {
+          "id": "q7",
+          "question": "🐵☁💪",
+          "ans": [
+            "goku",
+            "bakugou"
+          ]
+        }
+      ,
+        {
+          "id": "q8",
+          "question": "🔥😈🦶",
+          "ans": [
+            "shinra"
+          ]
+        }
+      ,
+        {
+          "id": "q9",
+          "question": "😈🗡📙",
+          "ans": [
+            "asta"
+          ]
+        }
+      ,
+        {
+          "id": "q10",
+          "question": "🎩🕺👹",
+          "ans": [
+            "muzan kibutsuji",
+            "muzan"
+          ]
+        }
+      ,
+        {
+          "id": "q11",
+          "question": "⚪🐅🕵️‍♂️",
+          "ans": [
+            "atsushi",
+            "atsushi nakajima",
+            "nakajima atsushi"
+          ]
+        }
+      ,
+        {
+          "id": "q12",
+          "question": "🐱👩‍⚕️🕵️‍♀️",
+          "ans": [
+           "maomao",
+           "mao mao" 
+          ]
+        }
+      ,
+        {
+          "id": "q13",
+          "question": "⚫🍷💼",
+          "ans": [
+            "black butler"
+          ]
+        }
+      ,
+        {
+          "id": "q14",
+          "question": "🟠🗡💀",
+          "ans": [
+            "ichigo",
+            "kurosaki ichigo",
+            "ichigo kurosaki"
+          ]
+        }
+      ,
+        {
+          "id": "q15",
+          "question": "☠📖",
+          "ans": [
+            "death note"
+          ]
+        }
+      ,
+        {
+          "id": "q16",
+          "question": "🔴🗡🦍🐍",
+          "ans": [
+            "renji",
+            "abarai renji",
+            "renji abarai"
+          ]
+        }
+      ,
+        {
+          "id": "q17",
+          "question": "🦅🐍😠",
+          "ans": [
+            "sasuke",
+            "uchiha sasuke",
+            "sasuke uchiha"
+          ]
+        }
+      ,
+        {
+          "id": "q18",
+          "question": "🔴☁",
+          "ans": [
+           "akatsuki" 
+          ]
+        }
+      ,
+        {
+          "id": "q19",
+          "question": "🐜🤴",
+          "ans": [
+            "meruem"
+          ]
+        }
+      ,
+        {
+          "id": "q20",
+          "question": "😈🐱🐜",
+          "ans": [
+            "pitou",
+            "neferpitou"
+          ]
+        }
+      ,
+        {
+          "id": "q21",
+          "question": "🧔👓🦍",
+          "ans": [
+            "zeke",
+            "zeke yeager",
+            "zrke jeager"
+          ]
+        }
+      ,
+        {
+          "id": "q22",
+          "question": "🐮🐙😎",
+          "ans": [
+            "killer bee"
+          ]
+        }
+      ,
+        {
+          "id": "q23",
+          "question": "😍👨‍🍳🦵",
+          "ans": [
+            "sanji",
+            "vinsmoke sanji"
+          ]
+        }
+      ,
+        {
+          "id": "q24",
+          "question": "🍊😼💶",
+          "ans": [
+           "nami" 
+          ]
+        }
+      ,
+        {
+          "id": "q25",
+          "question": "💀🎻",
+          "ans": [
+            "brook"
+          ]
+        }
+      ,
+        {
+          "id": "q26",
+          "question": "🎂👩‍🦳🏴‍☠️",
+          "ans": [
+            "big mom"
+          ]
+        }
+      ,
+        {
+          "id": "q27",
+          "question": "🐲🏴‍☠️",
+          "ans": [
+            "kaido"
+          ]
+        }
+      ,
+        {
+          "id": "q28",
+          "question": "🦁☀🥱",
+          "ans": [
+            "escanor"
+          ]
+        }
+      ,
+        {
+          "id": "q29",
+          "question": "🐲👹😡",
+          "ans": [
+            "meliodas"
+          ]
+        }
+      ,
+        {
+          "id": "q30",
+          "question": "🤡🃏♦",
+          "ans": [
+            "hisoka"
+          ]
+        }
+      ,
+        {
+          "id": "q31",
+          "question": "🥚🦸‍♂️🤜",
+          "ans": [
+            "saitama",
+            "one punch man"
+          ]
+        }
+      ,
+        {
+          "id": "q32",
+          "question": "🔵👁🤞",
+          "ans": [
+            "gojo",
+            "satoru gojo",
+            "gojo satoru"
+          ]
+        }
+      ,
+        {
+          "id": "q33",
+          "question": "👑👹✂",
+          "ans": [
+            "sukuna",
+            "ryomen sukuna",
+            "ryoumen sukuna"
+          ]
+        }
+      ,
+        {
+          "id": "q34",
+          "question": "🤖🦸‍♂️",
+          "ans": [
+            "genos"
+          ]
+        }
+      ,
+        {
+          "id": "q35",
+          "question": "💗🗡🍑",
+          "ans": [
+           "love hashira",
+           "mitsuri",
+           "kanroji",
+           "mitsuri kanroji" 
+          ]
+        }
+      ,
+        {
+          "id": "q36",
+          "question": "🗡🎮",
+          "ans": [
+            "sword art online"
+          ]
+        }
+      ,
+        {
+          "id": "q37",
+          "question": "👑♟🧠",
+          "ans": [
+            "lelouch"
+          ]
+        }
+      ,
+        {
+          "id": "q38",
+          "question": "⛓👁🔴",
+          "ans": [
+            "kurapika"
+          ]
+        }
+      ,
+        {
+          "id": "q39",
+          "question": "🃏🚬🔥",
+          "ans": [
+            "joker"
+          ]
+        }
+      ,
+        {
+          "id": "q40",
+          "question": "⚽🔒",
+          "ans": [
+            "blue lock"
+          ]
+        }
+      ,
+        {
+          "id": "q41",
+          "question": "🔵📦",
+          "ans": [
+           "blue box" 
+          ]
+        }
+      ,
+        {
+          "id": "q42",
+          "question": "🐇👦👹",
+          "ans": [
+            "promised neverland",
+            "yakusoku no neverland"
+          ]
+        }
+      ,
+        {
+          "id": "q43",
+          "question": "🔥👹🌺",
+          "ans": [
+            "hells paradise",
+            "jigokuraku",
+            "hell paradise"
+          ]
+        }
+      ,
+        {
+          "id": "q44",
+          "question": "🦸‍♂️🏫",
+          "ans": [
+            "my hero academia"
+          ]
+        }
+      ,
+        {
+          "id": "q45",
+          "question": "🥱🗡🕳",
+          "ans": [
+            "yami"
+          ]
+        }
+      ,
+        {
+          "id": "q46",
+          "question": "🌸💪",
+          "ans": [
+            "sakura",
+            "sakura haruno",
+            "haruno sakura"
           ]
         }
       ],

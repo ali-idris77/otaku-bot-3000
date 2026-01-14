@@ -20,6 +20,7 @@ const questions = storage.games.trivia.questions
         const que = rem[Math.floor(Math.random()*rem.length)]
         session.currentQuestion = que
         session.usedThisSession.push(que.id)
+        session.answered = false
         console.log("sending next que")
         await sock.sendMessage(from, {
             text:`❔Next question:
@@ -27,6 +28,7 @@ const questions = storage.games.trivia.questions
             20s`
         })
         session.timer = setTimeout(async ()=>{
+            if(session.answered) return
             await sock.sendMessage(from,{
                 text:`⏱Time's up, correct answer is ${que.ans[0]}. 
                 `
@@ -51,7 +53,8 @@ async function trivia(sock, from, sender, text, isContinuation = false){
         score:{},
         timeLimit:20,
         timer:null,
-        availableQues
+        availableQues,
+        answered:false
     }
     console.log(storage.games.active[from])
     console.log("starting trivia")
@@ -70,11 +73,13 @@ async function trivia(sock, from, sender, text, isContinuation = false){
          const session = storage.games.active[from]
          if(!session) return
          if(!sender || !session.currentQuestion) return
+         if(session.answered) return
         const userAns = normalize(text)
 
         const correct = session.currentQuestion.ans.some(a => normalize(a) === userAns)
         console.log("userAns:", userAns, "correct:", correct)
         if(correct){
+            session.answered = true
             clearTimeout(session.timer)
             console.log(sender, "got it correct")
             session.score[sender] = (session.score[sender] || 0) + 1;

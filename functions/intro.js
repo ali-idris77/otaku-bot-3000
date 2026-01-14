@@ -10,39 +10,33 @@ async function intro(from, sender, oga, sock) {
 console.log("admins:", admins)
 
     console.log("introducing...")
+    let reply
     switch (true) {
         case oga.includes(sender):
-        sock.sendMessage(from, {
-            text:`All ye lowly peasants make way for it is the one and only😎 Masta of Scata, the Mover and Shaker🙌, Sultan of 
+            reply =`All ye lowly peasants make way for it is the one and only😎 Masta of Scata, the Mover and Shaker🙌, Sultan of 
             Suya Ruler of Ribena👑, Odogwu of Otakus🥱, Magistrate of Meat pie😏, Leutenant of Legwork😌, Olympic Organizer of Ondo Oyo and also Ogun state😤, Azaman of A+🤘,
             Crusader of Cous-cous⚔,The Chosen champion of chicken lap chapman and chin chin, Big boss, Boss big, the satiation of the insatiables,the domination of the indomitables 
             the...the.. ehn i got it The Boasted breadwinner of Bayero University🔥 , His steezeness , his royal royalty highness All time Ogaa @${sender.split('@')[0]}🔥🔥🔥`
-        ,mentions: [sender]}
-    )    
             break;
         case admins.includes(sender):
-        sock.sendMessage(from, {
-            text:`An admin identifiable as @${sender.split('@')[0]}`,
-            mentions: [sender]
-        })    
+            reply =`An admin identifiable as @${sender.split('@')[0]}`   
             break;
         case homo.includes(sender):
-        sock.sendMessage(from, {
-            text:`Some random gay guy🤮`
-        })    
+            reply =`Some random gay guy🤮`   
             break;
         default:
-        sock.sendMessage(from, {
-            text:`some random dude or dudés who likes anime going by @${sender.split('@')[0]}`,
-            mentions:[sender]
-        })
+            reply =`some random dude or dudés who likes anime going by @${sender.split('@')[0]}`
             break;
     }
+    await sock.sendMessage(from, {
+        text: reply,
+        mentions:[sender]
+    })
     console.log("introduced")
 }
 
 async function intro_me(from, sock){
-    sock.sendMessage(from, {
+    await sock.sendMessage(from, {
             text:`Yo everyone I am the greatly revered *OTAKU BOT 3000*🔥🔥🔥 
             but you can call me yobi🌚, im here to moderate all your bullshit 
             so you can behave like proper humans😊 Imagine even a bot knows y'all tripping . 
@@ -52,7 +46,7 @@ async function intro_me(from, sock){
     )
 }
 async function menu(from, sock) {
-    sock.sendMessage(from, {
+    await sock.sendMessage(from, {
         text: `⚔ *OTAKU BOT 3000* ⚔
         ~*BIO*~
         ⨳ *NICKNAME* : YOBI 🔥
@@ -84,6 +78,7 @@ async function scores(from, sock) {
     const emoji = storage.games.emoji.scores[from] || []
     const trivia = storage.games.trivia.scores[from] || []
     const chain = storage.games.chain.scores[from] || []
+    const chaino = storage.games.chainOne.scores[from] || []
     let mentions = []
     let text = `🏆*SCORES*🏆\n\n`
     text += `*EMOJI GAME*:\n`
@@ -125,6 +120,23 @@ async function scores(from, sock) {
                 text += `No scores yet\n\n`
             }else{
                 chain.forEach((s,i) => {
+                    text += `${i+1}. Date: ${new Date(s.date).toLocaleDateString()} | Scores: \n`
+                    const entries = Object.entries(s.scores)
+                    entries.sort((a,b) => b[1]- a[1])
+                    entries.forEach(([user, score], index) => {
+                        text += `   ${index+1}. @${user.split("@")[0]} -- ${score}pts \n`;
+                    if(!mentions.includes(user)){
+                    mentions.push(user)
+                    }
+                    })
+                })
+            text += `\n`
+    }
+    text += `*WORD CHAIN GAME (SINGLE PLAYER)*:\n`
+            if(chaino.length === 0){
+                text += `No scores yet\n\n`
+            }else{
+                chaino.forEach((s,i) => {
                     text += `${i+1}. Date: ${new Date(s.date).toLocaleDateString()} | Scores: \n`
                     const entries = Object.entries(s.scores)
                     entries.sort((a,b) => b[1]- a[1])

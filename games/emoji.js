@@ -26,10 +26,9 @@ const questions = storage.games.emoji.questions
             20s`
         })
         session.timer = setTimeout(async ()=>{
+         if(session.answered) return       
             await sock.sendMessage(from,{
-                text:`⏱Time's up, correct answer is ${que.ans[0]}. 
-                
-                 next question:`
+                text:`⏱Time's up, correct answer is ${que.ans[0]}.`
             })
             session.questionsIndex += 1
             await nextQue(sock, from, sender, text)
@@ -51,20 +50,17 @@ async function emoji(sock, from, sender, text, isContinuation = false){
         score:{},
         timeLimit:20,
         timer:null,
-        availableQues
+        availableQues,
+        answered:false
     }
     console.log(storage.games.active[from])
     console.log("starting emoji")
         await sock.sendMessage(from,{
             text:`Okayy😁 time for emoji guess👏
-        
-            Reply with the correct answer to the question given
-        
+        Reply with the correct answer to the question given
         Y'all have 20s for each question⏱
-        
         The first to get the correct answer scores 
-        >(be careful with spellings tho)
-        
+        (be careful with spellings tho)
         Let's gooo`
         })
         await nextQue(sock, from, sender, text)
@@ -74,11 +70,13 @@ async function emoji(sock, from, sender, text, isContinuation = false){
          const session = storage.games.active[from]
          if(!session) return
          if(!sender || !session.currentQuestion) return
+        if(session.answered) return
         const userAns = normalize(text)
 
         const correct = session.currentQuestion.ans.some(a => normalize(a) === userAns)
         console.log("userAns:", userAns, "correct:", correct)
         if(correct){
+            session.answered = true
             clearTimeout(session.timer)
             console.log(sender, "got it correct")
             session.score[sender] = (session.score[sender] || 0) + 1;

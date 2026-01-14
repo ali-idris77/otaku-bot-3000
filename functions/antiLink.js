@@ -6,7 +6,7 @@ async function antiLink(sock, from , sender, text, oga){
     .filter(p => p.admin)
     .map(p => p.id)
     if(text.includes('http://') || text.includes('https://')){
-    if(!oga.includes(sender) && !admins.includes(sender)) return
+    if(oga.includes(sender) || admins.includes(sender)) return
     const key = `${from}:${sender}`
     storage.warnings = storage.warnings || {}
     const count = (storage.warnings[key] || 0) + 1;

@@ -10,7 +10,7 @@ async function antiSpam(sock, from, sender, oga) {
     const admins = metadata.participants
     .filter(p => p.admin)
     .map(p => p.id)
-    if(!oga.includes(sender) && !admins.includes(sender)) return
+    if(oga.includes(sender) || admins.includes(sender)) return
     const key = `${from}:${sender}`;
     const now = Date.now();
     let data = spamMap.get(key)
