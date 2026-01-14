@@ -11,7 +11,7 @@ const questions = storage.games.emoji.questions
         const session = storage.games.active[from]
         console.log("nextQue session:", session)
         if(!session)return
-        if(session.questionsIndex >= 3 || session.availableQues.length === 0 ){
+        if(session.questionsIndex >= 5 || session.availableQues.length === 0 ){
             console.log("ending emoji")
            await  endemoji(sock, from)
             return
@@ -20,6 +20,7 @@ const questions = storage.games.emoji.questions
         const que = rem[Math.floor(Math.random()*rem.length)]
         session.currentQuestion = que
         session.usedThisSession.push(que.id)
+        session.answered = false
         console.log("sending next que")
         await sock.sendMessage(from, {
             text:`❔${que.question} 
