@@ -21,11 +21,8 @@ console.log("admins:", admins)
         case admins.includes(sender):
             reply =`An admin identifiable as @${sender.split('@')[0]}`   
             break;
-        case homo.includes(sender):
-            reply =`Some random gay guy🤮`   
-            break;
         default:
-            reply =`some random dude or dudés who likes anime going by @${sender.split('@')[0]}`
+            reply = `some random dude or dudés who likes anime going by @${sender.split('@')[0]}`
             break;
     }
     await sock.sendMessage(from, {
